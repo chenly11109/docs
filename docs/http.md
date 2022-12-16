@@ -34,3 +34,55 @@ SSL证书需要钱，功能越强大的证书费用越高，个人网站、小�
 CA（公信力认证中心）用私钥对消息进行加密形成数字签名,bill 的公钥和个人信息+数字签名=数字证书  
 
 浏览器->服务器数字证书 ->浏览器CA列表验证证书
+
+
+## hash routing & history routing
+1.#长得不好看,但可路由，是一种anchor point, SPA 用了这个方式来假冒url, 是历史上的一种使用的方式  
+2.旧的浏览器不支持history routing - 也可以直接改url但不用加#了)  
+3.react-router 新版本即使是#也是用的histroy routing, 需要注意  
+4.#之后的不会发到server端，所以如果涉及到reloading & linking, 不会有问题（针对#之前的url， 对#会重新定位)  
+5.但是browserRouter可能会有问题， 因为这个地址实际上在server上不存在，刷新的时候又发过去了  
+
+
+### hash routing
+just like the /# in url
+#properties is not sent to the server
+hash value could be get from the <mark> window.location.hash </mark> property
+
+doesn`t send the information to the web server
+
+### browser router - history API
+
+```javascript
+    document.location.href = 'https://developer.mozilla.org/';
+```
+- reloads the page
+
+```javascript
+    window.history.pushState({}, null, 'https://developer.mozilla.org/');
+```
+
+-change the URL without triggering the page reload.  
+-URL must be of the same origin as the current page  
+
+
+# 跨域 - cross-origin  
+## 同源策略
+协议，域名，端口  
+应用访问了应用域名或端口之外的域名或端口
+*浏览器限制，而不是服务端限制  
+*可以使用 a 标签（模拟xhr请求）和 img 标签  
+
+## 处理方式  
+1. 直接改浏览器  
+* 非简单请求：(options）方式- Access-Control-Request-Headers:content-type, 
+Access-Control-Allow-Headers, Access-Control-Max-Age  
+3. JSONP - JSON with Padding, 利用Script 标签请求资源可以跨界（不推荐）  
+4. 修改服务器，“Access-Control-Allow-Origin”: “*”，“Access-Control-Allow-Methods”: “*”  
+5. 在客户端添加反向代理（proxy)，这样请求就是同源的了  
+
+## iframe 的跨域问题  
+### document.domain
+作用是获取/设置当前文档的原始域问题  
+https://juejin.cn/post/7010691890928418824
+https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe
