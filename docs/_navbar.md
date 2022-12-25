@@ -6,6 +6,7 @@
     * [javascript](javascript.md)
     * [wechat](wechat.md)
     * [typescript](typescript.md)
+    * [html](html.md)
 
 * 其他
 

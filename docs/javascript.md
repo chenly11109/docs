@@ -116,5 +116,6 @@ console.log(baz);
 // expected output: 0
 ```
 
-
+## function overloading (函数重载)
+** javascript 同一作用域出现两个名字一样的函数，后面的会覆盖前面的，JS 没有真正意义的函数重载
 
