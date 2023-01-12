@@ -60,4 +60,27 @@ user <-(authorization grant : 权限范围&有效期)-> client <-(access token)<
 ## RFC - request for comments
 一系列以编号排定的文件。文件收集了有关互联网相关信息，以及UNIX和互联网社区的软件文件
 
+# 测试修改head小插件
+whistle(好难用 不知道是什么原因...), ModHeader
+
+# 插槽 
+客户可能要求本地化部署，也要求SaaS + 本地化混合部署
+-定制化，系统、模块的功能拓展
+
+解决`依赖` (高耦合)：
+依赖注入（控制反转）
+利用第三方角色和配置来实现解耦
+
+Addon - 插件机制， 客户模块定义的接口：插槽，模块的实现：插件。 - 组件地址。
+插件机制，是模块（也就是我们后面要说的应用）之间的互相扩展的最通用、最轻量的方式。它能够实现在自由灵活组装模块的基础上，达到最大化的可扩展性。
+
+aPaaS
+
+
+# micro forntend
+1. bring together multiple JS microfrontends in a frontend application
+2. use multiple frameworks on the same page(REACT, Angular, etc.)
+3. deploy microfrontends independently
+4. lazy load
+
 
