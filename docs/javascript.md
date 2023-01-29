@@ -119,3 +119,11 @@ console.log(baz);
 ## function overloading (函数重载)
 ** javascript 同一作用域出现两个名字一样的函数，后面的会覆盖前面的，JS 没有真正意义的函数重载
 
+
+## console.dir()
+display object in a list of the properties
+
+## style.width , HTMLElement.offsetWidth
+difference :
+1.style.width if not set by javascript, may be incorrect.
+2.offsetWidth is get according to the box-sizing model.

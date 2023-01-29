@@ -1,3 +1,8 @@
+too long; didn't read" -> tl;dr
+
+
+## Any organization that designs a system will produce a design whose structure is a copy of the organization’s communication structure. – Melvin E. Conway
+
 # Test
 
 https://juejin.cn/post/6844904194600599560#heading-27
@@ -77,10 +82,125 @@ Addon - 插件机制， 客户模块定义的接口：插槽，模块的实现�
 aPaaS
 
 
-# micro forntend
-1. bring together multiple JS microfrontends in a frontend application
-2. use multiple frameworks on the same page(REACT, Angular, etc.)
-3. deploy microfrontends independently
-4. lazy load
+# micro frontend
+简而言之就是把一个项目分成各个部分，有同一个入口，解决共同依赖/组件等等但是又有很多团队做不同的页面需要独立处理的问题  
+iframe - 白屏 - micro frontend
+single-spa, micro-app, qiankun， webpack5 Module Federation
+## purpose:
+独立开发- 测试 - 部署 - 基座应用
+## single-spa - kan
+
+component lifecycles
+single-spa root config   - respond to url change
+applications must have bootstrap, mount, unmount
+
+## web-component
+Custom elements, shadow DOM, HTML templates
+```javascript
+CustomElementRegistry.define();
+Element.attachShadow();
+<template> <slot>
+```
+
+## Module Federation
+Module Federation是Webpack5提出的概念，module federation用来解决多个应用之间代码共享的问题，让我们更加优雅的实现跨应用的代码共享。  
+
+（monorepo）
 
 
+
+# monorepo
+
+monolithic respositories
+monorepo + CI/CD pipelines
+visibility, simpler dependency management, single source of truth, consistency, shared timeline, atomic commits, implicit CI(continuous integration), unified CI/CD
+
+## best practice
+1. Define a unified directory organization for easy discovery.
+2. Maintain branch hygiene. Keep branches small, consider adopting trunk-based development.
+3. Use pinned dependencies for every project. Upgrade dependencies all at once, force every project to keep up with the dependencies. Reserve exceptions for truly exceptional cases.
+4. If you’re using Git, learn how to use shallow clone and filter-branch to handle large-volume repositories.
+5. Shop around for a smart build system like Bazel or Buck to speed up building and testing.
+6. Use CODEOWERS when you need to restrict access to certain projects.
+7. Use a cloud CI/CD platform such as Semaphore to test and deploy your applications at scale.
+
+# webpack / rollup
+#### Babel
+Bundler-based build tool - crawl process and concatenate entire JS file
+
+Source code ,distribution(list) code
+
+
+Vite
+Es modules in browser - transform and serve a piece of application	code using ES Modules when the browser request for it
+(Deploy)
+
+Production - performance optimization - tree-shaking, lazy-loading, common chance splitting
+
+More bundles means better caching, but less compression
+
+
+#### Entry
+#### Output
+#### Loaders - 
+process other types of files and convert then into valid modules that can be consumed by application and added to dependency graph
+#### Test:which file should be transformed
+ #### Use
+ which loaders should be used to do the transforming
+module.rules
+#### Cache - 
+Cache the generated web pack modules and chunks to improve build speed - filesystem for more options
+
+
+Plugins
+
+Mode
+ Browser compatibility
+
+
+
+///A small sample of how a bundler works!
+#### Transpile 
+take source code written in one language and transforming into another language that has a similar level of abstraction
+
+Web pack, browserify,parcel
+
+#### Entry file - bootstrap our entire application
+#### Bootstrapping
+bootstrap - 序列,starting code, instructions for how the program should start
+Code splitting on demand loading
+-try understand which file it depends on - iterate - figures out every module - dependency graph
+
+Circular dependencies, caching module exports, parsing each module just once
+
+#### Javascript parser
+Parser - resolve something into components - complier in a tree like structure(parse tree, Abstract syntax tree - AST Tree)
+
+commonJS module system: require, module, export
+
+```javascript
+createAsset(fileName){
+Return {
+Id,filename,dependencies(get when traverse ast), code(transformAst)
+} 
+}
+
+createGraph(entry){
+mainAsset = createAsset(entry);
+->queue[] ->createAsset->{id, dependencies, code, filename)
+Execute until queue is empty
+
+—>{
+Mapping,->relativePath : child.id
+Dependencies ->
+```
+
+1.add entry point
+2.module graph
+3.babel, transpile 
+Chunk graph
+Chunk main
+Chunk async
+
+Optimization.availableModules
+Child : normal import, same chunks, all importer must be included, try all dependencies optionally 
