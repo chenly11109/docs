@@ -14,3 +14,8 @@
   - [埋点](track.md)
   - [git](git.md)
   - [others](others.md)
+
+- 课程笔记
+
+  - [MissingCourse](MIT_Missing.md)
+  - [HEC_Computer](Nand2Teris.md)

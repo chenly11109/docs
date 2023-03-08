@@ -64,3 +64,8 @@ Fast web server, reverse proxy and load balancer, SSL/TLS terminator, web accele
 # k8s - kubernetes
 
 automating development, scaling, and management of containerized applications
+
+# php
+-client-side scripting language  
+-Hypertext Preprocessor  
+-<? php echo .....>  
