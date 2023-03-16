@@ -1,13 +1,12 @@
 # Home Page
 self notes
+### contents
+- Frontend - React, CSS, Javascript & HTTP
+- Backends - backends, system design knowledge
 
-# contents
-## Frontend - React, CSS, Javascript & HTTP
-## Backends - backends, system design knowledge
-## Graphics - c++ / graphics, three.js, unity, etc.
+### in progress
+- CS basics - how to build a computer
+- programming language & object-oriented design
 
-
-half adder
-adder
-alu
-combinational vs sequential logic, clocks and cycles, flip-flops, registers, RAM units, counters
+### in the future
+-  Graphics - c++ / graphics,WebGL, three.js, unity, etc.

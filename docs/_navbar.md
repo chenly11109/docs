@@ -10,12 +10,11 @@
 
 - 其他
 
-  - [后端](backend.md)
   - [埋点](track.md)
-  - [git](git.md)
+  - [webpack ... and others](webpack.md)
   - [others](others.md)
 
 - 课程笔记
 
-  - [MissingCourse](MIT_Missing.md)
-  - [HEC_Computer](Nand2Teris.md)
+  - [command-line / regex / git](MIT_Missing.md)
+  - [How to build a computer](Nand2Teris.md)

@@ -1,6 +1,4 @@
 # shell
-
-
 ## environment variables
 - echo $PATH : search for the path and find if the promram exists for the program you want to run
 - which echo : show the path where echo is
@@ -50,8 +48,6 @@ eg: echo hello `>` hello.txt
 - `history` - like the uparrow, show history of commands
 - `convert` jpg to png etc.
 - ctrl+R search in back history
-
-
  grep command searches for lines that contain strings that match a pattern
 
 # vim
@@ -86,10 +82,58 @@ eg: echo hello `>` hello.txt
 - `ci[` change inside []
 - `.` repeat the last command
 
-## ~/.vimrc
+## ~/.vim  rc
 - settings
 - `let` names="....." !space matters
 - `put` =names
+
+# Data Wrangling
+## regular expression
+- `regex101` debugging
+- . means “any single character” except newline
+- * zero or more of the preceding match
+- + one or more of the preceding match
+- [abc] any one character of a, b, and c
+- (RX1|RX2) either something that matches RX1 or RX2
+- ^ the start of the line
+- $ the end of the line
+
+- | `sort` 
+- | `uniq`
+- `sed` edit on the text, `awk` edit based on columns
+
+
+# command-line
+- no space around `=` for shell command
+- `UNIX` communication mechanism
+- `Ctrl-C` - prompts the shell to deliver a `SIGNT` signal to the process
+- `SIGNT` / `SIGQUIT`/^Z - STGTSTP
+- `tmux` terminal multiplexer
+- `alias` alias_name='...' 
+
+## dotfiles
+- ./...
+- ignored by `ls`
+
+
+
+
+## git rebase vs git merge
+
+history rewriting
+
+rebasing is changing the base of your branch from one commit to another making it appear as if you'd created your branch from a different commit.
+
+### git rebase <base>
+
+This automatically rebases the current branch onto ＜ base ＞, which can be any kind of commit reference (for example an ID, a branch name, a tag, or a relative reference to HEAD).
+
+### git rebase -i(--interactive) <base>
+
+## git commit -a -m "....."
+
+
+
 
 
 
