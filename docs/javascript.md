@@ -1,4 +1,3 @@
-
 # javascript
 
 ## apply, bind, call
@@ -79,7 +78,7 @@ function debounce(callBack, wait) {
 }
 ```
 
->how to use them:  
+> how to use them:
 
 ```javascript
     const myFunction = (event)=>{...};
@@ -88,7 +87,7 @@ function debounce(callBack, wait) {
 //use muDebouncedFunction as myFunction
 ```
 
->react - debounce - useMemo(() => debounce(changeHandler, 300), [])
+> react - debounce - useMemo(() => debounce(changeHandler, 300), [])
 
 ```javascript
   const debouncedChangeHandler = useMemo(
@@ -96,19 +95,20 @@ function debounce(callBack, wait) {
   , [dep1, dep2, ..., depN]);
 ```
 
-
 ## comma operator(,)
+
 ```javascript
-expr1, expr2, expr3/* , … */
+expr1, expr2, expr3; /* , … */
 ```
- evaluates each of its operands (from left to right) and returns the value of the last operand.   
- 
-This is commonly used to provide multiple parameters to a for loop.  
+
+evaluates each of its operands (from left to right) and returns the value of the last operand.
+
+This is commonly used to provide multiple parameters to a for loop.
 
 ## nullish operator ??
 !!的一种补充，只是检查了NULL 和 undefined
 ```javascript
-const foo = null ?? 'default string';
+const foo = null ?? "default string";
 console.log(foo);
 // expected output: "default string"
 
@@ -139,6 +139,21 @@ const car1 = new Car('Eagle', 'Talon TSi', 1993);
 //usually won`t do that!         
 
 4.if the constructor function `returns` a non-primitive, the return value will become the result of the `new` expression, otherwise, the `newInstance` is returned as the result
+## function overloading (函数重载)
 
+\*\* javascript 同一作用域出现两个名字一样的函数，后面的会覆盖前面的，JS 没有真正意义的函数重载
+
+## console.dir()
+
+display object in a list of the properties
+
+## style.width , HTMLElement.offsetWidth
+
+difference :
+1.style.width if not set by javascript, may be incorrect.
+2.offsetWidth is get according to the box-sizing model.
+
+## 瀑布流实现的方案
 
 //Classes can only be instantiated with the `new` operator
+https://juejin.cn/post/7014650146000470053

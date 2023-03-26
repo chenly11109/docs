@@ -1,7 +1,12 @@
 # Home Page
 self notes
+### contents
+- Frontend - React, CSS, Javascript & HTTP
+- Backends - backends, system design knowledge
 
-# contents
-## Frontend - React, CSS, Javascript & HTTP, nextJS
-## FullStack - backends, system design knowledge, docker
-## Graphics - c++ / graphics, three.js, unity, etc.
+### in progress
+- CS basics - how to build a computer
+- programming language & object-oriented design
+
+### in the future
+-  Graphics - c++ / graphics,WebGL, three.js, unity, etc.

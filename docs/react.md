@@ -107,3 +107,11 @@ same as useMemo, but for functions instead of arrays/objects
 
 ## performance
 ### profile - developer tools - check react documentations!
+
+## useLayoutEffect
+
+ 1.DOM measurement and make DOM mutations or trigger a synchronous re-render by updating state 2.make sure the value is updated since it is synchronous
+
+Fires synchronously after all DOM mutations - before the browser has a chance to paint
+useEffect - componentDidMount,componentDidUpdate,componentWillUnmount
+Runs after react renders your component and ensures that it will not block browser painting
