@@ -106,6 +106,7 @@ expr1, expr2, expr3/* , … */
 This is commonly used to provide multiple parameters to a for loop.  
 
 ## nullish operator ??
+!!的一种补充，只是检查了NULL 和 undefined
 ```javascript
 const foo = null ?? 'default string';
 console.log(foo);
@@ -115,6 +116,29 @@ const baz = 0 ?? 42;
 console.log(baz);
 // expected output: 0
 ```
+## new operator
+create an instance of a pre-defined object types that has a <mark>constructor</mark> function
+
+```javascript
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+
+const car1 = new Car('Eagle', 'Talon TSi', 1993);
+
+```
+
+1.create a blank, plain JS object, - `newInstance`  
+
+2.points `newInstance` [[Prototype]] to the constructor function`s prototype property.  
+
+3.executes the constructor functions with the given arguments, binding `newInstance` as the `this` context  
+
+//usually won`t do that!         
+
+4.if the constructor function `returns` a non-primitive, the return value will become the result of the `new` expression, otherwise, the `newInstance` is returned as the result
 
 
-
+//Classes can only be instantiated with the `new` operator
