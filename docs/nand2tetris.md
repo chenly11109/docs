@@ -54,6 +54,20 @@ three adder:a, b, carry => sum, carry
 - CPU = Registers + ALU(arithmetic logic unit)
 - data, address, control
 - registers: store intermediate results in the registers
-- program counter
 
 
+
+## fetch - execute
+
+- program memory (counter) -> address -> next instruction
+
+## CPU
+- execute the current instruction
+- next instruction
+
+-instruction memory / data memory
+- inM: from Data Memory - value from the current selected register
+- instruction - from the instruction memory - value from the current selected register
+- reset
+- addressM, outM, writeM ( right to write)
+- pc - program counter output - emit the next instruction
