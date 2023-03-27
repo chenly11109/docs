@@ -1,6 +1,33 @@
 # React
 
 ## Immer
+work with immutable state in a more convenient way
+创造了更简洁的代码，不用deepCopy 深层次的代码。
+
+ ```javascript
+import produce from "immer";
+
+const nextState = produce(baseState, draft=>{
+  //make some changes to the draft
+})//produces a State
+ ```
+apply all changes to a temporary draft, a proxy of the current State
+
+```javascript
+//combined with React:
+const [state, setState] = useState();
+
+...
+setState(produce(draft=>{
+  //make diret changes to the draft!
+  const todo = draft.find(...);
+  todo.done = !todo.done.
+
+  draft.push(...);
+}))
+
+```
+
 
 ### Proxy
 object enables you to create a proxy for another object - intercept  and redefine fundamental operations for that object  

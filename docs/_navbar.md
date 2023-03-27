@@ -14,7 +14,7 @@
   - [webpack ... and others](webpack.md)
   - [others](others.md)
 
-- 课程笔记
+- 学习笔记
 
   - [command-line / regex / git](MIT_Missing.md)
-  - [How to build a computer](Nand2Teris.md)
+  - [nand2tetris_build_computer_from_scrach](nand2tetris.md)
