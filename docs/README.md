@@ -6,7 +6,8 @@ self notes
 
 ### in progress
 - CS basics - how to build a computer
-- programming language & object-oriented design
+- missing semester / terminal,git,etc.
 
 ### in the future
 -  Graphics - c++ / graphics,WebGL, three.js, unity, etc.
+-  programming language & object-oriented design

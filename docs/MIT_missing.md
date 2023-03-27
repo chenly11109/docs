@@ -43,12 +43,13 @@ eg: echo hello `>` hello.txt
 - image.{png, jpg} = image.png img.jpg
 - {a..j}
 - diff <(ls foo) <(ls bar)
-- `ripgrep` /`rg`s - recursively serach directories for a regex `grep` - search for lines that contain strings that match a pattern
+- `grep` command searches for lines that contain strings that match a pattern
+- `ripgrep` /`rg`s - recursively serach directories for a regex
 - find . -name "*.tmp" -exec rm{} \;
 - `history` - like the uparrow, show history of commands
 - `convert` jpg to png etc.
 - ctrl+R search in back history
- grep command searches for lines that contain strings that match a pattern
+
 
 # vim
 ## model editor
@@ -68,7 +69,7 @@ eg: echo hello `>` hello.txt
 - `:q` close the window
 - `:qa` close all windows
 
-## movements - 25`
+## movements
 - Basic movement: `hjkl` (left, down, up, right)
 - Words: `w` (next word), `b` (beginning of word), `e` (end of word)
 - Find: f{character}, t{character}, F{character}, T{character}
@@ -107,14 +108,24 @@ eg: echo hello `>` hello.txt
 - no space around `=` for shell command
 - `UNIX` communication mechanism
 - `Ctrl-C` - prompts the shell to deliver a `SIGNT` signal to the process
-- `SIGNT` / `SIGQUIT`/^Z - STGTSTP
-- `tmux` terminal multiplexer
+- `SIGNT` / `SIGQUIT`
+- `^Z` - STGTSTP/SIGSTOP, pause a process
+- `tmux` terminal multiplexer, popular
 - `alias` alias_name='...' 
+- `oh-my-zsh` zsh frame
+
+- `glob` glob patterns specify sets of filenames with `wildcard`(*, ?) characters eg:*.txt - globbing, globe etc.
 
 ## dotfiles
 - ./...
 - ignored by `ls`
 
+
+# VCSs version control systems
+`de facto` in fact, or in effect, whether by right or not
+
+## data model
+- features: maintaining history, supporting branches, enabling collaboration
 
 
 
