@@ -152,7 +152,7 @@ eg: echo hello `>` hello.txt
 - `references` human-readable names for SHA-1 hashes
 - eg:`master` reference points to the latest commit in the main branch of development
 - use `reference` refer to a particular snapshot in the history
-- `HEAD` where we currently are - what it is relative to  - `parents` field of the commit
+- `HEAD` where we currently are - what it is relative to  - `parents` field of the commi
 
 ## staging area
 `orthogonal`正交  
