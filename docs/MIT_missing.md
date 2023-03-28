@@ -122,29 +122,59 @@ eg: echo hello `>` hello.txt
 
 
 # VCSs version control systems
-`de facto` in fact, or in effect, whether by right or not
+- `de facto` in fact, or in effect, whether by right or not
+- `ad-hoc` when necessary or needed
 
 ## data model
 - features: maintaining history, supporting branches, enabling collaboration
+- `repositories` : the data `objects` + `references`
 
 
+## history
+- a file is called a `blob`
+- `tree` - directory
+- `snapshots` - commits
+- `DAG` - directed actclic graph of `snapshots` - history
+-  
+``` typescript
+ type commit = struct {
+    parents: array<commit>
+    author: string
+    message: string
+    snapshot: tree
+}
+```
+##  objects and content-addressing
+- type `object` = blob | tree | commit
+- content - addressed (SHA-1 hash)  
+ When object reference other objects, they don’t actually contain them in their on-disk representation, but have a reference to them by their hash.
 
-## git rebase vs git merge
+- `references` human-readable names for SHA-1 hashes
+- eg:`master` reference points to the latest commit in the main branch of development
+- use `reference` refer to a particular snapshot in the history
+- `HEAD` where we currently are - what it is relative to  - `parents` field of the commit
 
+## staging area
+`orthogonal`正交  
+
+### cheat-sheet
+- git checkout -b <name/> = git checkout + git branch
+- git rebase vs git merge
 history rewriting
-
 rebasing is changing the base of your branch from one commit to another making it appear as if you'd created your branch from a different commit.
+- git rebase <base>
+This automatically rebases the current branch onto ＜ base ＞, which can be any kind of commit reference (for example an ID, a branch name, a tag, or a relative reference to HEAD).git 
+- git commit -a -m "....."
 
-### git rebase <base>
+# debugging
+- premature optimizaiton is the root of all evil
+- profilers and monitoring tools
 
-This automatically rebases the current branch onto ＜ base ＞, which can be any kind of commit reference (for example an ID, a branch name, a tag, or a relative reference to HEAD).
-
-### git rebase -i(--interactive) <base>
-
-## git commit -a -m "....."
-
-
-
+## profiling
+- real / user / sys time
+- CPU profilers
+### tracing
+keep a record of every function call
 
 
 
