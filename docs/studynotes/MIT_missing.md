@@ -174,9 +174,15 @@ This automatically rebases the current branch onto ＜ base ＞, which can be an
 - real / user / sys time
 - CPU profilers
 ### tracing
-keep a record of every function call
+- keep a record of every function call
 
+### sampling profilers
+- probe the program periodically and record the program`s stack
 
+### memory profiler
+- check memory leak
 
+## flame graph
+<img src="../assets/cpu-bash-flamegraph.svg">
 
 
