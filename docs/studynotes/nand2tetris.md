@@ -71,3 +71,9 @@ three adder:a, b, carry => sum, carry
 - reset
 - addressM, outM, writeM ( right to write)
 - pc - program counter output - emit the next instruction
+
+
+## assembly language
+- mnemonics 助记词
+- translating symbolic programs into binary code
+- implement in hight-level language!
