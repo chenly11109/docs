@@ -157,3 +157,9 @@ difference :
 
 //Classes can only be instantiated with the `new` operator
 https://juejin.cn/post/7014650146000470053
+
+## console
+- assert 断言，如果不符合，则...
+```javascript
+console.assert(a === 3, "a 不是 3")；
+```
