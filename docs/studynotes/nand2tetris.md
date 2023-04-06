@@ -76,4 +76,24 @@ three adder:a, b, carry => sum, carry
 ## assembly language
 - mnemonics 助记词
 - translating symbolic programs into binary code
-- implement in hight-level language!
+- implement in high-level language!
+
+- use sysmbolic references to memory addresses - symbol table
+- assembler, virtual machine, 
+- machine-language - LOAD(operation code)R3(register)@7(address)
+
+- `variables` - automatically assign to memory addresses
+- `label` - mark locations in the program
+- `label` is not counted as line numbers
+
+- `variables` will be allocated to memory locations starting at address 1024
+
+- instruction terminates the program’s execution by putting the computer in an infinite loop. eg: 06: goto 6;
+
+- variable allocation assumption implies the largest program we can run is 1024 instructions
+- when allocating memory space for variables, the translator must take into account both their data types and the word width of the target hardware
+- assembly syntax
+
+
+
+
