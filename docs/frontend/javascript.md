@@ -163,3 +163,111 @@ https://juejin.cn/post/7014650146000470053
 ```javascript
 console.assert(a === 3, "a 不是 3")；
 ```
+
+
+## tree shaking
+the removal of dead code
+ - webpack
+ - relie on the static structure of ES2015 module syntax `import` and `export` - from `rollup`
+ 
+
+ ## crypto (not recommended for front-end)
+ - XOR crypto method
+ - Web Crypto API?
+ - https://www.crypto101.io/ ( Crypto 101 )
+
+
+ ```javascript
+ // Encrypt a password using XOR
+async function encryptPassword(password, key) {
+    let encryptedPassword = '';
+    for (let i = 0; i < password.length; i++) {
+      const charCode = password.charCodeAt(i) ^ key.charCodeAt(i % key.length);
+      encryptedPassword += String.fromCharCode(charCode);
+    }
+    return encryptedPassword;
+  }
+  
+  // Decrypt a password using XOR
+  function decryptPassword(encryptedPassword, key) {
+    let decryptedPassword = '';
+    for (let i = 0; i < encryptedPassword.length; i++) {
+      const charCode = encryptedPassword.charCodeAt(i) ^ key.charCodeAt(i % key.length);
+      decryptedPassword += String.fromCharCode(charCode);
+    }
+    return decryptedPassword;
+  }
+
+console.log(encryptPassword("1234","2"));
+ ```
+
+
+ ## import
+ - hundreds of thousands of JavaScript packages hosted on NPM, all available because of the CommonJS require function.
+ - modularity is introduced to Node
+ - `require` loading scripts synchronously - kills performance
+ 
+
+ ## websocket
+
+- new WebSocket(url);
+- onOpen, onMessage, onError, onClose
+- send, close
+
+ ``` javascript
+class MyWebSocketClient {
+
+
+//single websocket instance  
+  constructor(url) {
+    this.socket = new WebSocket(url);
+    this.socket.onopen = this.onOpen.bind(this);
+    this.socket.onmessage = this.onMessage.bind(this);
+    this.socket.onerror = this.onError.bind(this);
+    this.socket.onclose = this.onClose.bind(this);
+  }
+
+
+//shared websocket
+  constructor() {
+    this.socket = MyWebSocketClient.socket; // Use the singleton socket
+    if (!this.socket) {
+      this.socket = new WebSocket('ws://localhost:8080');
+      MyWebSocketClient.socket = this.socket; // Set the singleton socket
+    }
+    // ......
+  }
+
+  onOpen() {
+    console.log('WebSocket connection established.');
+  }
+
+  onMessage(event) {
+    console.log(`Received message: ${event.data}`);
+  }
+
+  onError(error) {
+    console.error(`WebSocket error: ${error}`);
+  }
+
+  onClose(event) {
+    console.log(`WebSocket connection closed with code ${event.code}.`);
+  }
+
+  send(data) {
+    if (this.socket.readyState === WebSocket.OPEN) {
+      this.socket.send(data);
+    } else {
+      console.error('WebSocket is not open.');
+    }
+  }
+
+  close() {
+    this.socket.close();
+  }
+}
+
+// Usage example:
+const mySocket = new MyWebSocketClient('ws://localhost:8080');
+mySocket.send('Hello, server!');
+ ```
