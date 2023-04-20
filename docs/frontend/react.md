@@ -115,3 +115,12 @@ same as useMemo, but for functions instead of arrays/objects
 Fires synchronously after all DOM mutations - before the browser has a chance to paint
 useEffect - componentDidMount,componentDidUpdate,componentWillUnmount
 Runs after react renders your component and ensures that it will not block browser painting
+
+## lazyLoad
+- images & video
+- lazy loading is a solution that lowers initial page payload and load time
+- 浏览器解析到img标签的src有值，才会去发起请求，那么就可以让图片需要展示时，才对其src赋值真正的图片地址
+```javascript
+$img.src = $img.dataset.src//将真实链接放在dataset-src里，当img出现在view中时替换src发送请求
+```
+![lazyLoad](../assets/lazyLoad.png ':size=80%')

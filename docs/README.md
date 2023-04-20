@@ -5,12 +5,10 @@ self notes
 - Backends - backends, system design knowledge
 
 ### in progress
-- CS basics - how to build a computer(nand2teris) - software
-- missing semester / terminal,git,etc. - <a href="/#/studynotes/MIT_Missing">Go to notes</a>
-- JAVA tutorial - <a href="./#/backend/java">Go to notes</a>
-
-### completed
--  CS basics - how to build a computer(nan2teris)/hardware - <a href="./#/studynotes/nand2tetris">Go to notes</a>
+- [ ] CS basics - how to build a computer(nand2teris) - software
+- [x] CS basics - how to build a computer(nan2teris)/hardware - <a href="./#/studynotes/nand2tetris">Go to notes</a>
+- [ ] missing semester / terminal,git,etc. - <a href="/#/studynotes/MIT_Missing">Go to notes</a>
+- [ ] JAVA tutorial - <a href="./#/backend/java">Go to notes</a>
 ### in the future
 -  ~~Graphics - c++ / graphics,WebGL, three.js, unity, etc.~~
 -  programming language & object-oriented design

@@ -183,6 +183,4 @@ This automatically rebases the current branch onto ＜ base ＞, which can be an
 - check memory leak
 
 ## flame graph
-<img src="../assets/cpu-bash-flamegraph.svg">
-
-
+![flame](../assets/cpu-bash-flamegraph.svg 'size=50%')
