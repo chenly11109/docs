@@ -211,3 +211,14 @@ fast programming language
 写文档，
 mock数据，
 使用数据模型（模版）自动生成
+
+# MIME
+A media type (also known as a Multipurpose Internet Mail Extensions or MIME type) indicates the nature and format of a document, file, or assortment of bytes.
+
+type/subtype;parameter=value
+eg:text/plain;charset=UTF-8
+application/pdf etc. -download
+
+application/octet-stream
+unknown binary file, browsers usually don't execute it, or even ask if it should be executed. They treat it as if the Content-Disposition header was set to attachment, and propose a "Save As" dialog.  
+

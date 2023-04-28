@@ -13,7 +13,7 @@
   - [JAVA](backend/java.md)
 
 - 其他
-
+  - [npm&package](others/npm.md) 
   - [埋点](others/track.md)
   - [webpack ... and other packaging related](others/webpack.md)
   - [others](others/others.md)
