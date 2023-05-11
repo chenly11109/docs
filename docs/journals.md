@@ -18,7 +18,9 @@
     - 验收
 
 - Java Chapter 13
-- Mizi 
+    - 申请cpilot并安装
+    - 部署github homepage
+- 锻炼身体30分钟
 
 
 #### 20230512
