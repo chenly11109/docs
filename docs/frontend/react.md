@@ -124,3 +124,6 @@ Runs after react renders your component and ensures that it will not block brows
 $img.src = $img.dataset.src//将真实链接放在dataset-src里，当img出现在view中时替换src发送请求
 ```
 ![lazyLoad](../assets/lazyLoad.png ':size=80%')
+
+## useImperative
+## cloneElement

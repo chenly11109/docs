@@ -5,14 +5,19 @@ self notes
 - Backends - backends, system design knowledge
 
 ### in progress
+- [ ] JAVA tutorial - <a href="./#/backend/java">Go to notes</a>
+- [ ] AI prompt and so on 
+    - https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/
 - [ ] CS basics - how to build a computer(nand2teris) - software
 - [x] CS basics - how to build a computer(nan2teris)/hardware - <a href="./#/studynotes/nand2tetris">Go to notes</a>
-- [ ] missing semester / terminal,git,etc. - <a href="/#/studynotes/MIT_Missing">Go to notes</a>
-- [ ] JAVA tutorial - <a href="./#/backend/java">Go to notes</a>
+- [x] missing semester / terminal,git,etc. - <a href="/#/studynotes/MIT_Missing">Go to notes</a>
+
 ### in the future
 -  ~~Graphics - c++ / graphics,WebGL, three.js, unity, etc.~~
 -  programming language & object-oriented design
-- cloud services?
+-  software system
+-  backend language & SQL
+- ~~cloud services?~~
     - Cloud Computing Basics: This free course on Udacity provides a comprehensive introduction to cloud computing, including the basics of cloud infrastructure, virtualization, and containerization.
 
     - AWS for Front-End Engineers: This course on Pluralsight is designed specifically for front-end developers who want to learn how to build applications on AWS. The course covers topics such as deploying applications, working with serverless architecture, and using AWS Lambda.

@@ -73,6 +73,39 @@ cross document messaging
 window.postMessage???
 
 
+## innerHTML property
+`Document` - (`Element` - `Node` - `Event`)
+- dangerouslySetInnerHTML
+- innerHTML
+ - on HTML elements to programmatically set their content
+eg:
+populat a `<div>` element with the data coming from a rich text editor
+```javascript
+const App = () => {
+  const data = 'lorem <b>ipsum</b>';
+  return (
+    <div
+      dangerouslySetInnerHTML={{__html: data}}
+    />
+  );
+}
+export default App;
+```
+
+- react will aware the HTML tags and renders them properly
+- sanitization tools - `DOMPurify` - remove the script on the code
+#### innerHTML
+``` javascript
+<ul id="list">
+  <li><a href="#">Item 1</a></li>
+  <li><a href="#">Item 2</a></li>
+  <li><a href="#">Item 3</a></li>
+</ul>
 
 
+const list = document.getElementById("list");
 
+list.innerHTML += `<li><a href="#">Item ${list.children.length + 1}</a></li>`;
+
+
+```

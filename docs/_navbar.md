@@ -22,3 +22,5 @@
 
   - [command-line / regex / git](studynotes/MIT_Missing.md)
   - [nand2tetris_build_computer_from_scrach](studynotes/nand2tetris.md)
+
+- [每日更新](journals.md)
