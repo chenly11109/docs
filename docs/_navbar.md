@@ -21,6 +21,9 @@
 - 学习笔记
 
   - [command-line / regex / git](studynotes/MIT_Missing.md)
-  - [nand2tetris_build_computer_from_scrach](studynotes/nand2tetris.md)
+  - [nand2tetris_hardware](studynotes/nand2tetris.md)
+  - [nand2tetris_software](studynotes/nand2teris(II).md)
 
 - [每日更新](journals.md)
+
+
