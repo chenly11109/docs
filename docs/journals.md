@@ -11,20 +11,28 @@
 - [ ] 使用cpilot&AI prompt
 - [ ] 完成软件系统第一个project
 
-#### 20230511  
+#### 工作
 - 完成预览图方案
-    - 分享落地页卡片
-    - （bug列表）responsive 视图样式调整，对齐等
-    - 验收
+    - 自适应视图
+    - 统一预览图组件（列表，卡片，详情）
+    - 收获： 
+        - image onError属性
+        - meme
+        - cdn修改图片的能力
 
-- Java Chapter 13
-    - 申请cpilot并安装
-    - 部署github homepage
-- 锻炼身体30分钟
+    - 剩余：
+        - 埋点
+        - 国际化
+        - 接口/video格式自查
 
+- 自然语言搜索文件
+    - cs后台（ai搜索balabalab）
+    - useRequestData - 修改搜索
+    - 通过修改结果反推修改文字
 
-#### 20230514
-- Java Chapter 14,15,16
-    - 申请cpilot并安装
-    - 部署github homepage
-- 锻炼身体30分钟
+#### 学习
+- Java 13 - error
+- Java 14 - GUI, eventListener
+- Java 15 - swing
+
+#### 锻炼！！！
