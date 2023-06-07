@@ -106,3 +106,7 @@ A `CORS` preflight request is a CORS request that checks to see if the CORS prot
 - all `safe`/`PUT`/`DELETE` methods are `idempotent`, `POST` is not `Idempotent`
 
 
+## blocked csp
+blocked:csp  - in header
+Content Security Policy  
+Content-Security-Policy: default-src 'self'

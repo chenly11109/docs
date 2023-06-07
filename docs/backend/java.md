@@ -8,6 +8,8 @@
     - be assigned to a variable
     - be used as an argument
 
+- In Java, methods are not first class objects. The closest we get is Java Lambda Expressions.
+
 ## static / final
  - `static variable` shared by all instances
  - `static method` can not use instance variables
@@ -16,3 +18,12 @@
  - `final variable` could not change
  - `final method` could not overide
  - `final class` could not extend
+
+## buffer
+every trip to the disk is a big deal compared to manipulating data in memory
+
+- chain a `BufferedWriter` onto a `FileWriter`
+
+
+## channels vs socket
+channels can support nonblocking I/O, reading and writing via ByteBuffers, and asynchronous I/O
