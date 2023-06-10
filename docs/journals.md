@@ -11,20 +11,18 @@
 - [ ] 使用cpilot&AI prompt
 - [ ] 完成软件系统第一个project
 
-#### 20230511  
+#### 工作
 - 完成预览图方案
     - 分享落地页卡片
     - （bug列表）responsive 视图样式调整，对齐等
     - 验收
 
-- Java Chapter 13
-    - 申请cpilot并安装
-    - 部署github homepage
-- 锻炼身体30分钟
+
+#### 学习
+- [x] Java Chapter 13   error, try & catch
+- [x] Java Chapter 14 - GUI, innerClass, addEventListener
+- [x] Java Chapter 15 - swing
 
 
-#### 20230514
-- Java Chapter 14,15,16
-    - 申请cpilot并安装
-    - 部署github homepage
-- 锻炼身体30分钟
+#### 锻炼
+- ~~极乐净土~~
