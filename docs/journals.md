@@ -13,9 +13,12 @@
 
 #### 工作
 - 完成预览图方案
-    - 分享落地页卡片
-    - （bug列表）responsive 视图样式调整，对齐等
-    - 验收
+    - 自适应视图
+    - 统一预览图组件（列表，卡片，详情）
+    - 收获： 
+        - image onError属性
+        - meme
+        - cdn修改图片的能力
 
 
 #### 学习
@@ -23,6 +26,19 @@
 - [x] Java Chapter 14 - GUI, innerClass, addEventListener
 - [x] Java Chapter 15 - swing
 
+    - 剩余：
+        - 埋点
+        - 国际化
+        - 接口/video格式自查
 
-#### 锻炼
-- ~~极乐净土~~
+- 自然语言搜索文件
+    - cs后台（ai搜索balabalab）
+    - useRequestData - 修改搜索
+    - 通过修改结果反推修改文字
+
+#### 学习
+- Java 13 - error
+- Java 14 - GUI, eventListener
+- Java 15 - swing
+
+#### 锻炼！！！

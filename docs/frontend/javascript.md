@@ -271,3 +271,7 @@ class MyWebSocketClient {
 const mySocket = new MyWebSocketClient('ws://localhost:8080');
 mySocket.send('Hello, server!');
  ```
+
+
+ ## try & catch
+ 如果里面一层不catch,就会抛到外面一层的catch里去，不抛出去不回报错

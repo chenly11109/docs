@@ -55,7 +55,13 @@ function myFunction() {
   // Alert the copied text
   alert("Copied the text: " + copyText.value);
 }
-
-
 ```
+## 小程序分包问题（主包过大）
+1. subPackages 下分包，注意分包里尽量不要引入主包（folder）内的组件，将组件解构
+2. 减少图片（cdn）
+3. webpack tree shaking & 代码压缩
 
+- 打包分析工具
+```javascript
+ chain.plugin('analyzer').use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin, []);
+```
