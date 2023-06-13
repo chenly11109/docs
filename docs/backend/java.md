@@ -27,3 +27,21 @@ every trip to the disk is a big deal compared to manipulating data in memory
 
 ## channels vs socket
 channels can support nonblocking I/O, reading and writing via ByteBuffers, and asynchronous I/O
+
+## JShell
+Java REPL : read eval print loop
+
+## interface
+abstract method
+```java
+public interface Flyable{
+    public void fly();
+}
+```
+
+## stack & heap
+stack - method with local variables
+heap - place for object instances
+
+## principals
+- single response principals
