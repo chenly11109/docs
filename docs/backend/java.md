@@ -27,3 +27,21 @@ every trip to the disk is a big deal compared to manipulating data in memory
 
 ## channels vs socket
 channels can support nonblocking I/O, reading and writing via ByteBuffers, and asynchronous I/O
+
+## polymorphism
+abstract class & method
+```java
+abstract class Animal{
+    abstract void move(){
+        ...
+    }
+}
+class Sparrow extends Animal{...}
+Animal sparrow1 = new Sparrow(...);
+
+moveAnimals(sparrow1);
+
+static void moveAnimals(Animal n){
+    n.move();
+}
+```

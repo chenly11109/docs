@@ -10,7 +10,8 @@ h5是一种编程语言，用于微信的页面
 export default function download(url: string, name: string) {
   const link = document.createElement('a');
   link.download = name;
-  link.href = url;
+  // 确保每一次会下载一个新版本并预览！
+  link.href = `${item.url}&timestamp=${new Date().getTime()}`;
   link.style.display = 'none';
   link.click();
   link.remove();

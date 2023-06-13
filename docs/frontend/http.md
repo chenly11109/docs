@@ -110,3 +110,5 @@ A `CORS` preflight request is a CORS request that checks to see if the CORS prot
 blocked:csp  - in header
 Content Security Policy  
 Content-Security-Policy: default-src 'self'
+
+apollo配置 - 对header进行设置 
