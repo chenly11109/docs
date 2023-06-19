@@ -45,3 +45,10 @@ static void moveAnimals(Animal n){
     n.move();
 }
 ```
+
+## association
+- dependency
+    - a method depends another class
+- composition
+    - ownership, a class own another class
+- aggregation
