@@ -52,3 +52,20 @@ static void moveAnimals(Animal n){
 - composition
     - ownership, a class own another class
 - aggregation
+## JShell
+Java REPL : read eval print loop
+
+## interface
+abstract method
+```java
+public interface Flyable{
+    public void fly();
+}
+```
+
+## stack & heap
+stack - method with local variables
+heap - place for object instances
+
+## principals
+- single response principals

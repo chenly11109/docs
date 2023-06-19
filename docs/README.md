@@ -14,6 +14,26 @@ self notes
 
 ### in the future
 -  ~~Graphics - c++ / graphics,WebGL, three.js, unity, etc.~~
+-  WebXR Fundamentals:
+WebGL, WebXR, A-Frame, Three.js, Unity
+- WebXR, which is a JavaScript API for creating immersive experiences on the web.
+Learn about the different components of WebXR, such as VR (Virtual Reality), AR (Augmented Reality), and MR (Mixed Reality).
+Familiarize yourself with the concepts of scenes, entities, controllers, and interactions in the context of WebXR.
+-  A-Frame:
+A-Frame is a powerful and beginner-friendly framework for creating WebXR experiences. It is built on top of Three.js and provides a declarative approach to building scenes.
+Begin by exploring the A-Frame documentation (https://aframe.io/docs/) to understand the core concepts, entities, components, and system architecture.
+Work through the official A-Frame tutorials, which cover topics like creating 3D scenes, working with entities, applying textures and materials, and adding interactivity.
+Practice building simple A-Frame projects, starting with basic scenes and gradually incorporating more advanced features like animations, physics, and user interactions.
+-  Three.js:
+Three.js is a powerful JavaScript library for creating 3D graphics and animations in the browser.
+Begin with the Three.js documentation (https://threejs.org/docs/) to gain an understanding of the library's core concepts, including scenes, cameras, geometries, materials, and lights.
+Follow online tutorials and guides that walk you through the process of creating different types of 3D scenes and effects using Three.js.
+Explore the vast collection of examples provided on the Three.js website to see how various features and effects can be achieved.
+-  JavaScript and WebGL:
+WebXR, A-Frame, and Three.js are built on JavaScript and leverage WebGL for rendering graphics.
+Ensure you have a solid understanding of JavaScript fundamentals, including variables, functions, loops, and conditionals.
+Familiarize yourself with the basics of WebGL, which is the underlying technology for rendering 3D graphics in the browser. Understand concepts like shaders, buffers, and rendering pipelines.
+
 -  programming language & object-oriented design
 -  software system
 -  backend language & SQL
