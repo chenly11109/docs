@@ -69,3 +69,5 @@ heap - place for object instances
 
 ## principals
 - single response principals
+- substitute principle
+    - avoid degenerate method

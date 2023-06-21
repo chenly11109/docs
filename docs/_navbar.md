@@ -9,8 +9,10 @@
   - [html](frontend/html.md)
 
 - 后端
-
   - [JAVA](backend/java.md)
+
+- graphics related
+  - [notes](webGL/webGL.md)
 
 - 其他
   - [npm&package](others/npm.md) 
@@ -24,6 +26,5 @@
   - [nand2tetris_hardware](studynotes/nand2tetris.md)
   - [nand2tetris_software](studynotes/nand2teris(II).md)
 
-- [每日更新](journals.md)
 
 
