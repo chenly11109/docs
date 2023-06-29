@@ -71,3 +71,33 @@ heap - place for object instances
 - single response principals
 - substitute principle
     - avoid degenerate method
+- dry - don`t repeat yourself
+- DAO - data access object
+
+
+## static
+the particular member belongs to a type itself, rather than to an instance of that type
+
+## principals
+- Single Responsibility Principle <=> junk drawer
+    ```java
+   // should be avoided:
+
+   if(XXX instanceof XXXX){
+    
+   }else if(XXX instanceof XXX){
+
+   }
+    ```
+- Open Closed Principle
+    - open for extension and closed for modification
+
+- Liskov Substitution Principle
+- Interface Segregation Principle
+- Dependency Inversion Principle
+    - Higher level modules should not depend on lower level module to susceed
+    - details should depend on abstractions
+- template method design pattern
+
+## protected
+accessible to the same packages and subpackages
