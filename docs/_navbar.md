@@ -12,7 +12,7 @@
   - [JAVA](backend/java.md)
 
 - graphics related
-  - [notes](webGL/webGL.md)
+  - [notes](webGL/notes.md)
 
 - 其他
   - [npm&package](others/npm.md) 

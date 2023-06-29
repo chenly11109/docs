@@ -127,3 +127,9 @@ $img.src = $img.dataset.src//将真实链接放在dataset-src里，当img出现�
 
 ## useImperative
 ## cloneElement
+
+## MixedIn
+- A mixin is an abstract subclass; i.e. a subclass definition that may be applied to different superclasses to create a related family of modified classes.
+
+- The real, and only, difference between a mixin and normal subclass is that a normal subclass has a fixed superclass, while a mixin definition doesn't yet have a superclass. Only the mixin applications have their own superclasses.
+

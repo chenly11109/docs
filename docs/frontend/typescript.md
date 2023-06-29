@@ -38,3 +38,9 @@ Ambient Declarations is like an import keyword
 
 ## class
 TypeScript treats a class as both value and type. This implicit type declared by TypeScript describes the shape of the instance a class produces. Therefore when a class is used as a type, such as using let value :Class annotation, TypeScript checks if the value has all the public properties of the Class.
+
+## type guard
+narrow down the type of an object within a conditional block
+- javascript object doest not have typeof or instance of
+- user defined type guards
+- someArgumentName is SomeType

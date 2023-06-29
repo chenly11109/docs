@@ -275,3 +275,10 @@ mySocket.send('Hello, server!');
 
  ## try & catch
  如果里面一层不catch,就会抛到外面一层的catch里去，不抛出去不回报错
+
+ ## exponential backoff
+ 指数补偿
+ - eg: setInterval / setTimeout
+ ```javascript
+ const timeout = retryInterval ?? Math.min(1000 * 2 ** countRef.current, 30000);
+ ```
