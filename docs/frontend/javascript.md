@@ -282,3 +282,21 @@ mySocket.send('Hello, server!');
  ```javascript
  const timeout = retryInterval ?? Math.min(1000 * 2 ** countRef.current, 30000);
  ```
+
+ ## streams API
+ - make responses available as streams
+ - `ReadableStream`, `ReadableStream.getReader()`, `ReadableStream.cancel()`
+ - one reader can read a stream at a time
+ - You can make use of ready-made readable streams via mechanisms like a `Response.body` from a fetch request, or roll your own streams using the `ReadableStream()` constructor.
+
+
+
+
+
+ ## web workers
+
+ ## postMessage
+
+ ## closure
+ - possible to emulate private methods using closures
+ 

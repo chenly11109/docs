@@ -1,4 +1,96 @@
 # React
+## 源码研读
+### element & component
+- once an element is created, it is never mutated
+- instance is created by react and is used for lifecycle events and storing local state
+-  element is just an object
+-  type could be `string` - `dom tag element` or `function`
+```javascript
+const DeleteAccount = () => ({
+  type: 'div',
+  props: {
+    children: [{
+      type: 'p',
+      props: {
+        children: 'Are you sure?'
+      }
+    }, {
+      type: DangerButton,
+      props: {
+        children: 'Yep'
+      }
+    }, {
+      type: Button,
+      props: {
+        color: 'blue',
+        children: 'Cancel'
+      }
+   }]
+}});
+```
+- 3 ways to create a component in react, componnets encapsulate element trees
+(components is the type-element with props, can be classes or functions)
+```javascript
+React.createClass({
+  render(){
+    return ...
+  }
+});
+class Button extends React.Component{
+  render(){
+    return {...}
+  }
+}
+```
+### reconciliation
+
+- ReactDom / ReactNative - renderer
+- starts with `ReactDom.render()` or `setState()` 
+
+custom renderer 
+``` javascript
+ReactDom.render(component, HTML_DOM_Component);
+onst Reconciler = require('react-reconciler');
+const HostConfig = {
+  // You'll need to implement some methods here.
+  // See below for more information and examples.
+};
+
+const MyRenderer = Reconciler(HostConfig);
+const RendererPublicAPI = {
+  render(element, container, callback) {
+    // Call MyRenderer.updateContainer() to schedule changes on the roots.
+    // See ReactDOM, React Native, or React ART for practical examples.
+  }
+};
+module.exports = RendererPublicAPI;
+const HostConfig = {
+  createInstance(type, props) {
+    // e.g. DOM renderer returns a DOM node
+  },
+  // ...
+  supportsMutation: true, // it works by mutating nodes
+  appendChild(parent, child) {
+    // e.g. DOM renderer would call .appendChild() here
+  },
+  // ...
+};
+
+```
+
+`reconciler` 阶段会根据`ReactElement`类型生成对应的`fiber`节点
+
+### fiber
+- work on a Component that needs to be done or was done
+
+
+### DFS
+- 深度优先遍历
+- Start by putting any one of the graph's vertices on top of a stack.
+- Take the top item of the stack and add it to the visited list.
+- Create a list of that vertex's adjacent nodes. Add the ones which aren't in the visited list to the top of the stack.
+- Keep repeating steps 2 and 3 until the stack is empty.
+
 
 ## Immer
 work with immutable state in a more convenient way
@@ -28,8 +120,11 @@ setState(produce(draft=>{
 
 ```
 
+### react render - reconciliation
 
-### Proxy
+
+
+## Proxy
 object enables you to create a proxy for another object - intercept  and redefine fundamental operations for that object  
 Proxy:{target:original object to proxy,  
 handler:which operations will be intercepted and how to redefine  
