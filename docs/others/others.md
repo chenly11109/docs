@@ -215,3 +215,12 @@ mock数据，
 ## widget
 an element of a graphical user interface that displays information or provides a specific way for a user to interact with the OS or an application
 小东西
+
+
+## Apollo
+配置中心 - 框架
+- application
+- environment
+- cluster
+- namespace
+

@@ -112,3 +112,6 @@ Content Security Policy
 Content-Security-Policy: default-src 'self'
 
 apollo配置 - 对header进行设置 
+
+## cache
+<img src = '../assets/http-cache.awebp'>

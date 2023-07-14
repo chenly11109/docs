@@ -120,3 +120,20 @@ application/pdf etc. -download
 application/octet-stream
 unknown binary file, browsers usually don't execute it, or even ask if it should be executed. They treat it as if the Content-Disposition header was set to attachment, and propose a "Save As" dialog.  
 
+
+# ResizeObserver
+The ResizeObserver interface reports changes to the dimensions of an Element's content or border box, or the bounding box of an SVGElement.
+- `ResizeObserver.disconnect()`
+- `ResizeObserver.observe()`
+- `ResizeObserver.unobserve()`
+
+``` javascript
+const resizeObserver = new ResizeObserver((entries) => {
+  for (const entry of entries) {
+    ...
+  }
+})
+
+resizeObserver.observe(element);
+
+```
