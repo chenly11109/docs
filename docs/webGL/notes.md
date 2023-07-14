@@ -24,3 +24,11 @@ window.requestAnimationFrame(loop);
 
 ## sprite
 - sprite is a small image that is cut out of a larger image called a sprite sheet or master image.
+
+
+## rotation3d
+every rotation in three dimensions is defined by its axis(a vector along this axis is unchanged by the rotation) and its angle.
+
+## gluLookAt
+the view matrix rewrites all coordinates in eye space
+gluLookAt: mat4 (eyex, eyey, eyez, centerx, centery, centerz, upx, upy, upz)

@@ -115,3 +115,11 @@ apollo配置 - 对header进行设置
 
 ## cache
 <img src = '../assets/http-cache.awebp'>
+
+- 强缓存
+命中则不需要给服务器发送请求
+    - `200(from cache)`
+- 协商缓存
+服务器决定是否使用缓存
+    - last-modified
+    - etag
