@@ -32,3 +32,7 @@ every rotation in three dimensions is defined by its axis(a vector along this ax
 ## gluLookAt
 the view matrix rewrites all coordinates in eye space
 gluLookAt: mat4 (eyex, eyey, eyez, centerx, centery, centerz, upx, upy, upz)
+<img src = "./assets/gluLookAt.png"/>
+- openGL camera is always at origin and facing to -z eye space
+- in a global system, I need to have my camera looking at some scene, with a certain up axix(so that the position of the camera is defined)
+- gluLookAt produce a matrix4 which will transform the camera from where it is to the origin in a global system.
