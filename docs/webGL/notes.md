@@ -141,3 +141,4 @@ where I is the final intensity, A is the ambient term, E is the self-emission, a
 
 ## ray-surface intersection
 odd intersections is inside a polygon
+- barycentric coordinates
