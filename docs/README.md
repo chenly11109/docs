@@ -5,17 +5,19 @@ self notes
 - Backends - backends, system design knowledge
 
 ### in progress
-- [ ] JAVA tutorial - <a href="./#/backend/java">Go to notes</a>
+- [ ] webGPU
+- [x] JAVA tutorial - <a href="./#/backend/java">Go to notes</a>
+    - Head First Java
 - [ ] AI prompt and so on 
     - https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/
-- [ ] CS basics - how to build a computer(nand2teris) - software
+- ~~[ ] CS basics - how to build a computer(nand2teris) - software~~
 - [x] CS basics - how to build a computer(nan2teris)/hardware - <a href="./#/studynotes/nand2tetris">Go to notes</a>
 - [x] missing semester / terminal,git,etc. - <a href="/#/studynotes/MIT_Missing">Go to notes</a>
 
 ### in the future
 -  ~~Graphics - c++ / graphics,WebGL, three.js, unity, etc.~~
 -  WebXR Fundamentals:
-WebGL, WebXR, A-Frame, Three.js, Unity
+~~WebGL~~, WebXR, A-Frame, Three.js, Unity
 - WebXR, which is a JavaScript API for creating immersive experiences on the web.
 Learn about the different components of WebXR, such as VR (Virtual Reality), AR (Augmented Reality), and MR (Mixed Reality).
 Familiarize yourself with the concepts of scenes, entities, controllers, and interactions in the context of WebXR.

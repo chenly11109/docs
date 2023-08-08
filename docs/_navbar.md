@@ -11,8 +11,9 @@
 - 后端
   - [JAVA](backend/java.md)
 
-- graphics related
-  - [notes](webGL/notes.md)
+- 图像相关
+  - [notes](graphics/notes.md)
+  - [webGPU](graphics/webGPU.md)
 
 - 其他
   - [npm&package](others/npm.md) 
@@ -27,4 +28,6 @@
   - [nand2tetris_software](studynotes/nand2teris(II).md)
 
 
-
+- AI相关
+  - [结果统计](chatGPT/analyze.md)
+  - [学习笔记](chatGPT/notes.md)
