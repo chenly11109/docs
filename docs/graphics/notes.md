@@ -183,3 +183,11 @@ Throughput is a measure of how many units of information a system can process in
 ## SIMT
 single instruction, multiple threads
 - gpu should avoid if/else or loops
+
+## vector multiply
+- dot product
+
+```javascript
+A · B = a1 * b1 + a2 * b2 + a3 * b3
+```
+- cross product

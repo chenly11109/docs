@@ -300,3 +300,18 @@ mySocket.send('Hello, server!');
  ## closure
  - possible to emulate private methods using closures
  
+
+ ## array.flat()
+ ```javascript
+const arr4 = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
+arr4.flat(Infinity);
+// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ ```
+
+
+
+ ### in 
+ The in operator returns true if the specified property is in the specified object or its prototype chain.
+```javascript
+console.log('make' in car);
+```

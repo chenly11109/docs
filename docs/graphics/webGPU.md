@@ -260,9 +260,11 @@ webGPU 的结果最后会输出为texture的形式,再以(context)为媒介渲�
 ```
 
 ### @location(0)
+- related to vertex attribute
 - 对vertex和fragment来说都算是vertex的数据
 - fragment 会做interpolation
 - all that WebGPU cares about is we return a value for builtin(position) from the vertex shader and return a color/value for location(0) from the fragment shader
+- @location specifies which `GPURenderPassDescriptor.colorAttachment` to store the result in
 
 
 ```javascript
@@ -280,5 +282,222 @@ fn fn fs() -> @location(0) vec4f{
 }
 ```
 
-### uniform / storage / inter-stage variables
-global variable
+### uniform / storage
+- storage
+-  we can storage all data in the storage data
+- tell webGPU how it is orgnized and access to it in the shader
+- `GPUBufferUsage.INDEX | GPUBufferUsage.VERTEX | GPUBufferUsage.STORAGE`
+#### inter-stage varibales
+- between vertex and fragment
+- eg: color with each vertex -> color after interpolation
+```javascript
+  @fragment fn fs(@location(0) color: vec4f) -> @location(0) vec4f {
+        return color;
+      }
+```
+
+
+
+```javascript
+@group(0)@binding(2)var<storage, read>pos:array<Vertex>;
+ pass.draw(numVertices,kNumObjects);
+
+ //in wgsl
+  vsOut.position = vec4f(
+    pos[vertexIndex].position * otherStruct.scale + ourStruct.offset, 0.0, 1.0
+  );
+```
+### vertex-buffers
+```javascript
+  struct Vertex {
+    @location(0) position:vec2f;
+  }
+
+  const pipeline = device.createRenderPipeline({
+    ...
+    vertex:{
+      ...
+      buffers:[
+        {
+          arrayStride: 6 * 4, // 6 floats, 4 bytes each
+          //optional, default is vertex
+          stepMode: 'instance',
+          attributes: [
+            {shaderLocation: 1, offset:  0, format: 'float32x4'},  // color
+            {shaderLocation: 2, offset: 16, format: 'float32x2'},  // offset
+          ],
+        
+        }       
+      ]
+    }
+  })
+
+```
+<img src="../assets/vertex-buffer.svg" />
+
+### index-buffers
+```javascript
+
+    const indexBuffer = device.createBuffer({
+    label: 'index buffer',
+    size: indexData.byteLength,
+    usage: GPUBufferUsage.INDEX | GPUBufferUsage.COPY_DST,
+  });
+  device.queue.writeBuffer(indexBuffer, 0, indexData);
+   pass.setIndexBuffer(indexBuffer, 'uint32');
+
+   //compared with
+   //kNumObjects-instances
+   pass.draw(numVertices,kNumObjects);
+```
+
+
+### Unorm8x4
+Four unsigned bytes (u8). [0, 255] converted to float [0, 1] vec4 in shaders.
+
+### textures
+
+Textures most often represent a 2d image. A 2d image is just a 2d array of color values.
+- `sampler` :  A sampler can read up to 16 different values in a texture and blend them together
+  - filter and blend multiple pixels
+  - [0.0, 1.0]
+  
+
+```javascript
+const sampler = device.createSampler({
+      addressModeU: (i & 1) ? 'repeat' : 'clamp-to-edge',
+      addressModeV: (i & 2) ? 'repeat' : 'clamp-to-edge',
+      magFilter: (i & 4) ? 'linear' : 'nearest',
+});
+
+  const bindGroup = device.createBindGroup({
+      layout: pipeline.getBindGroupLayout(0),
+      entries: [
+        { binding: 0, resource: sampler },
+        { binding: 1, resource: texture.createView() },
+      ],
+    });
+```
+
+#### mipmap
+Mipmaps are pre-generated versions of an image at various levels of detail.
+ Mipmaps are a series of progressively smaller versions of an original texture, each half the size of the previous level.
+
+ ```javascript
+ const createTextureWithMips = (mips, label) => {
+    const texture = device.createTexture({
+      label,
+      size: [mips[0].width, mips[0].height],
+      mipLevelCount: mips.length,
+      format: 'rgba8unorm',
+      usage:
+        GPUTextureUsage.TEXTURE_BINDING |
+        GPUTextureUsage.COPY_DST,
+    });
+    mips.forEach(({data, width, height}, mipLevel) => {
+      device.queue.writeTexture(
+          { texture, mipLevel },
+          data,
+          { bytesPerRow: width * 4 },
+          { width, height },
+      );
+    });
+    return texture;
+  };
+
+   const sampler = device.createSampler({
+      addressModeU: 'repeat',
+      addressModeV: 'repeat',
+      magFilter: (i & 1) ? 'linear' : 'nearest',
+      minFilter: (i & 2) ? 'linear' : 'nearest',
+      mipmapFilter: (i & 4) ? 'linear' : 'nearest',
+    });
+
+
+ ```
+
+
+### webgpu bind group best practices
+- `GPUBindGroup`
+- declarations of the bind groups in the shaders
+```c
+@group(0)@binding(0) var<uniform> camera: Camera;
+struct VertexOutput{
+  @builtin(position) position:vec4f
+}
+
+@vertex fn vertexMain(@loaction(0) position:vec3f)->VertexOutput{
+   output.position = camera.projection * camera.view * model * vec4f(position, 1);
+}
+```
+- `GPUBindGroupLayout`
+```javascript
+const bindGroupLayout = gpuDevice.createBindGroupLayout({
+  entries:[{
+    binding:0,
+    visibility:GPUShaderStage.VERTEX,
+    buffer:{}
+  }]
+})
+```
+- `GPUPipelineLayout`
+
+```javascript
+const pipelineLayout = gpuDevice.createPipelineLayout({
+  bindGroupLayouts:[
+    bindGroupLayout
+  ]
+});
+
+const pipelineA = gpuDevice.createRenderPipeline({
+  layout:pipelineLayout, // could be replaced with 'auto'
+
+  vertex:{
+    module: vertexModuleA, // wgsl script
+    entryPoint:'vertexMain'
+  }
+})
+```
+
+- create a bind group and using the same `GPUBindGroupLayout` 
+```javascript
+//createBuffer, createTexture, createSampler...
+const cameraBuffer = gpuDevice.createBuffer({
+  size:144,
+  usage:GPUBufferUsage.COPY_DST | GPUBufferUsage.UNIFORM
+});
+
+const bindGroup = gpuDevice.createBindGroup({
+  layout: bindGroupLayout,
+  entries:[{
+    binding:0,
+    resource:{buffer: cameraBuffer}
+  }]
+})
+```
+
+- actually set the value, update the value within each `draw()` and `dispatch`
+
+```javascript
+const cameraArray = new Float32Array(36);
+cameraArray.set....
+
+device.queue.writeBuffer(cameraBuffer, 0, cameraArray);
+
+const commandEncoder = device.createCommandEncoder();
+const passEncoder = commandEncoder.beginRenderPass({...});
+
+passEncoder.setPipeline(pipelineA);
+passEncoder.setBindGroup(0, bindGroup);
+passEncoder.draw(128);
+passEncoder.end();
+
+
+device.queue.submit([commandEncoder.finish()]);
+
+
+```
+## data type in shader
+- uniforms, attributes(@location), buffers, textures, inter-stage variables, constants
+
+
