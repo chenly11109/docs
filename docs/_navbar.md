@@ -27,6 +27,9 @@
   - [nand2tetris_hardware](studynotes/nand2tetris.md)
   - [nand2tetris_software](studynotes/nand2teris(II).md)
 
+- leetcode
+  - [leetcode](leetcode/leetcode.md)
+  - [note](leetcode/notes.md)
 
 - AI相关
   - [结果统计](chatGPT/analyze.md)

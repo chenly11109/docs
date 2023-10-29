@@ -101,3 +101,6 @@ Utility.error('maybe!');
 
 })(Utility || (Utility = {}));
 ```
+
+## restart typescript server
+ctrl + shift + p in vscode - restart typescript server
