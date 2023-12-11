@@ -25,8 +25,8 @@ Leetcode 160. Intersection of Two Linked Lists
 Leetcode 141. Linked List Cycle (Linked List Cycle II)
 Leetcode 92. Reverse Linked List II
 Leetcode 328. Odd Even Linked List
-堆（Heap or Priority Queue）、栈（Stack）、队列（Queue）、哈希表类（Hashmap、Hashset）：
 
+堆（Heap or Priority Queue）、栈（Stack）、队列（Queue）、哈希表类（Hashmap、Hashset）：
 基础知识：各个数据结构的基本原理，增删查改复杂度。
 Queue题目：
 Leetcode 225. Implement Stack using Queues
@@ -68,8 +68,8 @@ Leetcode 295. Find Median from Data Stream （标准解法是双heap，但是Sor
 Leetcode 767. Reorganize String
 Leetcode 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit (这个题用单调双端队列、TreeMap、双heap都可以)
 Leetcode 895. Maximum Frequency Stack
-二分法（Binary Search）：
 
+二分法（Binary Search）：
 基础知识：二分法是用来解法基本模板，时间复杂度logN；常见的二分法题目可以分为两大类，显式与隐式，即是否能从字面上一眼看出二分法的特点：要查找的数据是否可以分为两部分，前半部分为X，后半部分为O
 显式二分法：
 Leetcode 34. Find First and Last Position of Element in Sorted Array
